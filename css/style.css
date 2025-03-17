@@ -1,0 +1,227 @@
+/* ============================= */
+/*  GENERAL STYLES */
+/* ============================= */
+:root{
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue: hsl(217, 54%, 11%);
+    --very-dark-blue-2: hsl(216, 50%, 16%);
+    --very-dark-blue-3: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --font-Outfit: 'Outfit', sans-serif;
+}
+/* ============================= */
+/*  FONT IMPORT */
+/* ============================= */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300 400 600;
+    font-display: swap;
+    src: url('/assets/fonts/Outfit-VariableFont_wght.ttf') format('wolf');
+}
+
+
+/* ============================= */
+/*  CONTAINER */
+/* ============================= */
+.container {
+    background-color: var(--very-dark-blue);
+    color: var(--white);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* ============================= */
+/*  CARD */
+/* ============================= */
+.card {
+    width: 327px;
+    background-color: var(--very-dark-blue-2);
+    border-radius: 15px;
+    padding: 24px;
+    margin-bottom: 36px;
+    transition: all 0.3s ease;
+}
+
+/* ============================= */
+/*  CARD IMAGE & HOVER EFFECT */
+/* ============================= */
+.card-hidden {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card-icon {
+    background-color: var(--cyan);
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    opacity: 50%;
+}
+
+.card-hidden:hover .card-icon {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+/* ============================= */
+/*  CARD TEXT */
+/* ============================= */
+.card h2 {
+    font-family: var(--font-Outfit);
+    font-size: 1.22em;
+    font-weight: 600;
+    margin-bottom: 12px;
+    transition: color 0.2s ease;
+}
+
+.card h2:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.card p {
+    font-family: var(--font-Outfit);
+    color: var(--soft-blue);
+    margin-bottom: 16px;
+}
+
+/* ============================= */
+/*  CARD FOOTER */
+/* ============================= */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+/*  ETH */
+.eth {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.eth p {
+    font-family: var(--font-Outfit);
+    color: var(--cyan);
+}
+
+/* CLOCK */
+.clock {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.clock p {
+    font-family: var(--font-Outfit);
+    color: var(--soft-blue);
+}
+
+/* ============================= */
+/*  HORIZONTAL LINE */
+/* ============================= */
+hr {
+    border: 1px solid var(--very-dark-blue-3);
+    margin-bottom: 16px;
+}
+
+/* ============================= */
+/* CREATOR INFO */
+/* ============================= */
+.creator {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.creator-avatar {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.creator p {
+    font-family: var(--font-Outfit);
+    color: var(--soft-blue);
+}
+
+.creator span {
+    font-family: var(--font-Outfit);
+    color: var(--white);
+    transition: color 0.2s ease;
+}
+
+.creator span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+/* ============================= */
+/* ATTRIBUTION */
+/* ============================= */
+.attribution {
+    font-family: var(--font-Outfit);
+    color: var(--soft-blue);
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.attribution a:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+/* ============================= */
+/*  MEDIA QUERIES (1440px) */
+/* ============================= */
+@media (min-width: 1440px) {
+    .card {
+        width: 420px; /* Optimized for larger screens */
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+    }
+
+    .card p {
+        font-size: 1.1em;
+    }
+
+    .creator-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .eth p,
+    .clock p,
+    .creator p,
+    .creator span {
+        font-size: 1em;
+    }
+
+    hr {
+        margin-bottom: 20px;
+    }
+}
