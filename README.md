@@ -14,10 +14,10 @@ The challenge is to build out this preview card component and get it looking as 
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="assets/design/desktop-preview.jpg" alt="Desktop View" width="200px">
+      <img src="assets/design/desktop-preview.jpg" alt="Desktop View" width="300px">
     </td>
     <td style="text-align: center;">
-      <img src="assets/design/mobile-design.jpg" alt="Mobile View" width="150px">
+      <img src="assets/design/mobile-design.jpg" alt="Mobile View" width="250px">
     </td>
   </tr>
 </table>
